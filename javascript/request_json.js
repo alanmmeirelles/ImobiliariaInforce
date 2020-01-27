@@ -6,9 +6,9 @@
         function inicio(){   //função disparada no start acima, onde vai dar inicio a leitura do carregamento das listas//.
           carregarDadosBanner(); //aqui é disparada a função para carregar os dados do arquivo banner.js. Terão mais aqui//
           carregarDadosCloudtags();
+          carregarDadosNoticias();
+          carregarDadosVitrine();
         }
-
-
 
   //inicio da área para carregamento de listas //
 
@@ -24,6 +24,20 @@
                function(callback){    // função do parâmetro "callback" que vai ser passada la para a funcao ajax e servir para retorno da função ajax, esse retorno é o conteudo/arquivo/resposta //
                   var data = JSON.parse(callback);  //o arquivo vem em string , assim uma variavel chamada data é criada para armazenar a resposta convertida em JSON//
                   bindCloud(data);  // disparada a função bindBanner, com ela que vamos inserir, bindar, as informações no html, O PARAMETRO(variavel) DATA É O JSON, assim dizendo//
+              });
+          }
+          function carregarDadosNoticias(){  // função disparada acima para carregar e solicitar a lista banner.js//
+            ajax("../resources/noticias.js","get",  // disparada a função de requisição, passando parâmetros referentes a lista banner.js, no caso url,method, callback(que é uma função e vai servir p retorno)//
+               function(callback){    // função do parâmetro "callback" que vai ser passada la para a funcao ajax e servir para retorno da função ajax, esse retorno é o conteudo/arquivo/resposta //
+                  var data = JSON.parse(callback);  //o arquivo vem em string , assim uma variavel chamada data é criada para armazenar a resposta convertida em JSON//
+                  bindNoticias(data);  // disparada a função bindBanner, com ela que vamos inserir, bindar, as informações no html, O PARAMETRO(variavel) DATA É O JSON, assim dizendo//
+              });
+          }
+          function carregarDadosVitrine(){  // função disparada acima para carregar e solicitar a lista banner.js//
+            ajax("../resources/vitrine.js","get",  // disparada a função de requisição, passando parâmetros referentes a lista banner.js, no caso url,method, callback(que é uma função e vai servir p retorno)//
+               function(callback){    // função do parâmetro "callback" que vai ser passada la para a funcao ajax e servir para retorno da função ajax, esse retorno é o conteudo/arquivo/resposta //
+                  var data = JSON.parse(callback);  //o arquivo vem em string , assim uma variavel chamada data é criada para armazenar a resposta convertida em JSON//
+                  bindVitrine(data);  // disparada a função bindBanner, com ela que vamos inserir, bindar, as informações no html, O PARAMETRO(variavel) DATA É O JSON, assim dizendo//
               });
           }
 

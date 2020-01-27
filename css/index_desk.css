@@ -174,11 +174,79 @@ header.cabecalho{
       font: 600 2vmax 'Raleway', sans-serif;
       margin-bottom: 2vh;
     }
-    .vitrine{
-      background-color: #eee;
-      width: 50%;
-      height: 60vh;
+    .g_vitrine{
+      width: 60%;
+      height: 51vh;
+      display: flex;
+      overflow-x: auto;
     }
+        .cardbody{
+          width: 15vw;
+          height: 46vh;
+          display: flex;
+          flex-direction: column;
+          padding: 1vh 0.5vw 1vh 0.5vw;
+          box-shadow: 0px 7px 10px #ccc;
+          border-radius: 10px;
+          background: #fff;
+          margin-left: 2vw;
+          flex: 0 0 auto;
+        }
+
+            .imagem_card{
+              width: 100%;
+              height: 20vh;
+              object-fit: cover;
+            }
+            .local{
+              width: 100%;
+              height: auto;
+              padding-top: 1vh;
+              color: grey;
+              font: 400 1vmax 'Raleway', sans-serif;
+            }
+                div.bairro{
+                  color: darkgreen;
+                  font: 800 1.1vmax 'Raleway', sans-serif;
+                }
+            .detalhes{
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              grid-column-gap: 0.5vw;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              margin: 2.5vh 0 2.5vh 0;
+
+            }
+
+                        img.icone_det{
+                          width: 40%;
+                          color: grey;
+                          height: auto;
+                        }
+
+                        .det_numeros{
+                          font: 600 1vmax 'Raleway', sans-serif;
+                          color: grey;
+                        }
+
+
+            .bot_veja{
+              width: 75%;
+              height: 4.5vh;
+              color: white;
+              background-color: green;
+              font: 600 1vmax 'Raleway', sans-serif;
+              display: flex;
+              margin: 0 auto;
+              justify-content: center;
+              align-items: center;
+              border-radius: 2vmax;
+            }
+
+
+
 
 /* --------------- Inicio texto informativo  ------------------------*/
 .C_textoinfo{
@@ -215,12 +283,35 @@ header.cabecalho{
   width: 100%;
   margin-top: 20vh;
 }
+   .g_noticia{
+     width: 79%;
+   }
+        .titulo_noticia{
+          color: #666;
+          font: 800 1.2vmax 'Raleway', sans-serif;
+        }
+
+        .card_not{
+          width: 18vw;
+          height: 50vh;
+          border: solid lightgreen;
+          box-shadow: none;
+          margin-left: 2vw;
+          padding: 1.4vh 0.8vw 1.5vh 0.8vw;
+    }
+        p.resumo_noticia{
+          color: grey;
+          font: 400 0.9vmax'Raleway', sans-serif;
+        }
+        .bot_not{
+        margin-top: 2vh;
+        }
 
 /* --------------- Inicio cloud tags  ------------------------*/
 
 .C_cloud{
   width: 100%;
-  margin-top: 30vh;
+  margin-top: 25vh;
   text-align: center;
 }
   .clouds{
